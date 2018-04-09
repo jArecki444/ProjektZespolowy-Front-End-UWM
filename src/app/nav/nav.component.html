@@ -12,7 +12,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul *ngIf="loggedIn()" class="nav navbar-nav">
         <li><a [routerLink]="['/user']" routerLinkActive="router-link-active" >Panel uzytkownika</a></li>
-        <li><a [routerLink]="['/admin']">Panela administratora</a></li>
+        <li><a [routerLink]="['/admin']">Panel administratora</a></li>
       </ul>
 
       <form *ngIf="!loggedIn()" #loginForm="ngForm" class="navbar-form navbar-right" (ngSubmit)="login()">
