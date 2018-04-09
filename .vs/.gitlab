@@ -1,0 +1,13 @@
+{
+  "User": {
+    "Id": 2128102,
+    "Username": "arekc444",
+    "Name": "Arkadiusz Cichurski",
+    "Email": "arekc444@gmail.com",
+    "AvatarUrl": "https://secure.gravatar.com/avatar/4bead8689e18134702158c69f2104537?s=80&d=identicon",
+    "PrivateToken": "5219cd6fde6bb6cf1c89f728110c888b89ff15663f1777325212affafb08697e",
+    "Host": "https://gitlab.com",
+    "TwoFactorEnabled": false,
+    "ApiVersion": 3
+  }
+}
