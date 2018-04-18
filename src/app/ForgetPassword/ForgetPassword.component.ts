@@ -15,7 +15,7 @@ export class ForgetPasswordComponent implements OnInit {
 
   SendMessagePassword() {
     this.authService.SendMessagePassword(this.model).subscribe(() => {
-      console.log('Registration successful');
+      console.log('ForgetPassword message sent successful');
     }, error => {
       console.log(error);
     });
