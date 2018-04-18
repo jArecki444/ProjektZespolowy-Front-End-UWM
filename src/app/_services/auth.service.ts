@@ -5,7 +5,7 @@ import { tokenNotExpired, JwtHelper} from 'angular2-jwt';
 
 @Injectable()
 export class AuthService {
-    baseUrl = 'http://coderscompanyapiv3.azurewebsites.net/api';
+    baseUrl = 'https://coderscompanyapiv3.azurewebsites.net/api';
     userToken: any;
     decodedToken: any;
     jwtHelper: JwtHelper = new JwtHelper();
