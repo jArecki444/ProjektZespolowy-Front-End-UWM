@@ -7,12 +7,14 @@ import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { AppRoutingModule } from './app-routing.module';
 import { UserComponent } from './user/user.component';
 import { AdminComponent } from './admin/admin.component';
 import { ForgetPasswordComponent } from './ForgetPassword/ForgetPassword.component';
 import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { EqualValidator } from './resetPassword/password.match.directive';
+import { AuthGuard } from './_guards/auth.guard';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,11 @@ import { EqualValidator } from './resetPassword/password.match.directive';
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
