@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AdminComponent } from './admin/admin.component';
 import { ForgetPasswordComponent } from './ForgetPassword/ForgetPassword.component';
 import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
-import { NoweHasloComponent } from './NoweHaslo/NoweHaslo.component';
 
 const appRoutes: Routes = [
     {path: 'user', component: UserComponent},

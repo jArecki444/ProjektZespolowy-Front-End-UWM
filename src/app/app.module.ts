@@ -13,7 +13,6 @@ import { AdminComponent } from './admin/admin.component';
 import { ForgetPasswordComponent } from './ForgetPassword/ForgetPassword.component';
 import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { EqualValidator } from './resetPassword/password.match.directive';
-import { NoweHasloComponent } from './NoweHaslo/NoweHaslo.component';
 
 @NgModule({
   declarations: [
@@ -25,8 +24,7 @@ import { NoweHasloComponent } from './NoweHaslo/NoweHaslo.component';
     AdminComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    EqualValidator,
-    NoweHasloComponent
+    EqualValidator
 ],
   imports: [
     BrowserModule,
