@@ -10,7 +10,7 @@ const appRoutes: Routes = [
     {path: 'user', component: UserComponent},
     {path: 'admin', component: AdminComponent},
     {path: 'forget_password', component: ForgetPasswordComponent},
-    {path: 'nowe_haslo', component: NoweHasloComponent}
+    {path: 'nowe_haslo', component: ResetPasswordComponent}
 ];
 @NgModule({
     imports: [
