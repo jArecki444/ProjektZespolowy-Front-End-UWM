@@ -16,7 +16,7 @@ login(model: any) {
     const headers = new Headers({'Content-type': 'application/json'});
     const options = new RequestOptions({headers: headers});
 
-    return this.http.post(this.baseUrl + '/AuthAdmin/loginUser', model, options).map((response: Response) => {
+    return this.http.post(this.baseUrl + '/Auth/loginUser', model, options).map((response: Response) => {
         const user = response.json();
         console.log(user);
         if (user) {
@@ -31,11 +31,11 @@ login(model: any) {
         return tokenNotExpired('token');
     }
     register(model: any) {
-        return this.http.post(this.baseUrl + '/AuthAdmin/registerUser', model, this.requestOptions());
+        return this.http.post(this.baseUrl + '/Auth/RegisterUser', model, this.requestOptions());
      }
 
      SendMessagePassword(model: any) {
-        return this.http.post(this.baseUrl + '/AuthAdmin/ForgotPassword', model, this.requestOptions());
+        return this.http.post(this.baseUrl + '/Auth/ForgotPassword', model, this.requestOptions());
      }
 
      private requestOptions() {
