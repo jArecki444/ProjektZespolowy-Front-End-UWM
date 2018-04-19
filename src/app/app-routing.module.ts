@@ -8,13 +8,17 @@ import { AuthGuard } from './_guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 
 export const appRoutes: Routes = [
+    {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-    {path: 'user', component: UserComponent, canActivate: [AuthGuard]},
-    {path: 'admin', component: AdminComponent},
+    {
+      path: '',
+      runGuardsAndResolvers: 'always',
+      canActivate: [AuthGuard],
+      children: [
+        {path: 'user', component: UserComponent},
+        {path: 'admin', component: AdminComponent}
+      ]
+    },
     {path: 'forget_password', component: ForgetPasswordComponent},
-    {path: 'nowe_haslo', component: ResetPasswordComponent},
-    {path: '**', redirectTo: 'home', pathMatch: 'full'}
+    {path: 'nowe_haslo', component: ResetPasswordComponent}
 ];
-  export class AppRoutingModule {
-
-  }
