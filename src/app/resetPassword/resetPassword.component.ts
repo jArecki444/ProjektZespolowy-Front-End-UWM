@@ -21,8 +21,8 @@ export class ResetPasswordComponent {
       console.log('appComponent: pathString...');           // Console.log XDDD Arecki robi na oślep ale punkt za wyciągnięcie ścieżki! 
       var test = this.pathString;
       var papa = this.standardEncoding(test);                           // Ścieżke do zmiennej LOKALNEJ przypisuje (łatwiej się pracuje podczas modyfikacji stringu)
-      var liczba1 = papa.indexOf('=');                      // Ścieżka jest charakterystyczna, posiada dwa znaki '=' dlatego szukam pozycje pierwszego z nich
-      var liczba2 = papa.indexOf('&');                      // Szukam pozycji '&' ponieważ na tym kończy mi się id użytwkownika
+      var liczba1 = test.indexOf('=');                      // Ścieżka jest charakterystyczna, posiada dwa znaki '=' dlatego szukam pozycje pierwszego z nich
+      var liczba2 = test.indexOf('&');                      // Szukam pozycji '&' ponieważ na tym kończy mi się id użytwkownika
       var _liczba1 = papa.indexOf('=', liczba1 + 1);        // Szukam kolejnej pozycji znaku '='
       this.id = test.substring(liczba1 + 1, liczba2);       // wyciągam id użytkownika przycinając ścieżkę
       this.kod = papa.substring(_liczba1 + 1, );            // wyciagam kod użytkownika
