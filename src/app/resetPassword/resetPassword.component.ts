@@ -16,6 +16,7 @@ export class ResetPasswordComponent {
   pathString: any;      // Ścieżka z linku
   id: any;              // ID
   kod: any;             // code
+  zmiennadlapicu: any;  // zmienna dla picu bo nie aktualizuje chmury
 
   constructor(private location: Location, private authService: AuthService) {
       this.pathString = location.path();                    // Arecki inicjuje ścieżkę z neta
@@ -59,6 +60,6 @@ export class ResetPasswordComponent {
     .replace(/%2B/gi, '+')
     .replace(/%3D/gi, '=')
     .replace(/%3F/gi, '?')
-    .replace(/%2F/gi, '/');
+    .replace(/%2F/gi, '/');       // komentarz dla picu
   }
 }
