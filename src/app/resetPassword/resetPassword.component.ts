@@ -2,6 +2,7 @@ import { Component, Directive, forwardRef, Attribute, OnChanges, SimpleChanges, 
 import { NG_VALIDATORS, Validator, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import { Password } from './password';
 import { Location } from '@angular/common';
+import { AuthService } from '../_services/auth.service';
 
 @Component({
   selector: 'app-resetPassword',
@@ -10,13 +11,13 @@ import { Location } from '@angular/common';
 })
 export class ResetPasswordComponent {
 
-  model = new Password('', '', '', '');
+  model = new Password('', '', '');
   submitted = false;
   pathString: any;      // Ścieżka z linku
   id: any;              // ID
   kod: any;             // code
 
-  constructor(private location: Location) {
+  constructor(private location: Location, private authService: AuthService) {
       this.pathString = location.path();                    // Arecki inicjuje ścieżkę z neta
       console.log('appComponent: pathString...');           // Console.log XDDD Arecki robi na oślep ale punkt za wyciągnięcie ścieżki! 
       var test = this.pathString;
@@ -28,11 +29,16 @@ export class ResetPasswordComponent {
       this.kod = papa.substring(_liczba1 + 1, );            // wyciagam kod użytkownika
       console.log('ID użytkownika: ' + this.id);
       console.log('Kod użytkownika: ' + this.kod);
-      this.model = new Password(this.id, this.kod, '', '');
+      this.model = new Password('', this.kod, this.id);
    }
 
-  SendNewPassword() {
+  SendNewPassword() {    
     this.submitted = true;
+    this.authService.SendNewPassword(this.model).subscribe(() => {
+      console.log('Zmieniono haslo pomyslnie');
+    }, error => {
+      console.log(error);
+    });
     console.log(this.model);
   }
 
@@ -44,6 +50,15 @@ export class ResetPasswordComponent {
     .replace(/%252F%252F/gi, '//')
     .replace(/%252F/gi, '/')
     .replace(/%253D%253D/gi, '==') // zamieniamy ciąg blablaba na == i dopiero po tym zapisujemy sciezke
-    .replace(/%3F/gi, '?');
+    .replace(/%3F/gi, '?')
+    .replace(/%40/gi, '@')
+    .replace(/%3A/gi, ':')
+    .replace(/%24/gi, '$')
+    .replace(/%2C/gi, ',')
+    .replace(/%3B/gi, ';')
+    .replace(/%2B/gi, '+')
+    .replace(/%3D/gi, '=')
+    .replace(/%3F/gi, '?')
+    .replace(/%2F/gi, '/');
   }
 }

@@ -51,7 +51,8 @@ login(model: any) {
      }
    // poprawka trzeba przetestować na serwerze
      SendNewPassword(model: any) {
-         return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model);
+         console.log(model);
+         return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model, this.requestOptions());
      }
 
      private requestOptions() {
