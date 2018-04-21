@@ -1,3 +1,4 @@
+
 <div class="text-center">
     <h1>Lista obecności pracownikow</h1>
     <hr>
@@ -18,8 +19,8 @@
                       </thead>
                       <tbody>
                           <tr *ngFor="let list of lista.userList">
-                              <td>
-                                  {{list.presence}} 
+                              <td> 
+                                {{ list.presence == true ? 'Obecny' : 'Nieobecny' }}
                               </td>
                               <td>
                                 {{list.name}}
