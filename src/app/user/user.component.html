@@ -1,9 +1,34 @@
 <div class="text-center">
-  <h1>Użytkownicy</h1>
-  <hr>
-  <div *ngFor="let list of lista.userList" class="row text-center">
-      <div class="col-md-4 col-sm-6 col-xs-12">
-          <h3>{{ list.name }} {{ list.surname }} {{list.presence}}</h3>
-      </div>           
-  </div>
-</div>
+    <h1>Lista obecności pracownikow</h1>
+    <hr>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+              <table class="table text-center">
+                      <thead>
+                          <tr>
+                              <th>
+                                  Obecność
+                              </th>
+                              <th>
+                                  Imię
+                              </th>
+                              <th>
+                                  Nazwisko
+                              </th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let list of lista.userList">
+                              <td>
+                                  {{list.presence}} 
+                              </td>
+                              <td>
+                                {{list.name}}
+                              </td>
+                              <td>
+                                {{list.surname}}
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+        </div>           
+    </div>

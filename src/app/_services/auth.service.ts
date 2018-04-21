@@ -49,9 +49,9 @@ login(model: any) {
      GetUsers() {
          return this.http.get(this.baseUrl + '/User/UserList').map((response: Response) => response.json());
      }
-
-     SendNewPassword(){ // nie działado poprawy 
-         return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model, )
+   // poprawka trzeba przetestować na serwerze
+     SendNewPassword(model: any) {
+         return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model);
      }
 
      private requestOptions() {
