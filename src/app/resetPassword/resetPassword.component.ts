@@ -10,7 +10,7 @@ import { Location } from '@angular/common';
 })
 export class ResetPasswordComponent {
 
-  model = new Password('', '');
+  model = new Password('', '', '', '');
   submitted = false;
   pathString: any;      // Ścieżka z linku
   id: any;              // ID
@@ -27,11 +27,15 @@ export class ResetPasswordComponent {
       this.kod = papa.substring(_liczba1 + 1, );            // wyciagam kod użytkownika
       console.log('ID użytkownika: ' + this.id);      
       console.log('Kod użytkownika: ' + this.kod);
+      this.model = new Password(this.id, this.kod, '', '');
    }
 
-  onSubmit() {
+   
+
+  SendNewPassword() {    
     this.submitted = true;
     console.log(this.model);
+
   }
 
 }

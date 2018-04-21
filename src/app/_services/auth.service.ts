@@ -50,6 +50,10 @@ login(model: any) {
          return this.http.get(this.baseUrl + '/User/UserList').map((response: Response) => response.json());
      }
 
+     SendNewPassword(){ // nie działado poprawy 
+         return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model, )
+     }
+
      private requestOptions() {
         const headers = new Headers({ 'Content-type': 'application/json'});
         return new RequestOptions({headers: headers});
