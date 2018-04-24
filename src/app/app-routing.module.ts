@@ -6,6 +6,7 @@ import { ForgetPasswordComponent } from './ForgetPassword/ForgetPassword.compone
 import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 export const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ export const appRoutes: Routes = [
       canActivate: [AuthGuard],
       children: [
         {path: 'user', component: UserComponent},
-        {path: 'admin', component: AdminComponent}
+        {path: 'admin', component: AdminComponent},
+        {path: 'register', component: RegisterComponent}
       ]
     },
     {path: 'forget_password', component: ForgetPasswordComponent},
