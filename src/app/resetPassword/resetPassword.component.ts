@@ -19,10 +19,9 @@ export class ResetPasswordComponent {
   zmiennadlapicu: any;  // zmienna dla picu bo nie aktualizuje chmury
 
   constructor(private location: Location, private authService: AuthService) {
-      this.pathString = location.path();                    // Arecki inicjuje ścieżkę z neta
-      console.log('appComponent: pathString...');           // Console.log XDDD Arecki robi na oślep ale punkt za wyciągnięcie ścieżki! 
+      this.pathString = location.path();                    // jArecki inicjuje ścieżkę z neta
       var test = this.pathString;
-      var papa = this.standardEncoding(test);                           // Ścieżke do zmiennej LOKALNEJ przypisuje (łatwiej się pracuje podczas modyfikacji stringu)
+      var papa = this.standardEncoding(test);               // Ścieżke do zmiennej LOKALNEJ przypisuje (łatwiej się pracuje podczas modyfikacji stringu)
       var liczba1 = test.indexOf('=');                      // Ścieżka jest charakterystyczna, posiada dwa znaki '=' dlatego szukam pozycje pierwszego z nich
       var liczba2 = test.indexOf('&');                      // Szukam pozycji '&' ponieważ na tym kończy mi się id użytwkownika
       var _liczba1 = papa.indexOf('=', liczba1 + 1);        // Szukam kolejnej pozycji znaku '='
@@ -33,7 +32,7 @@ export class ResetPasswordComponent {
       this.model = new Password('', this.kod, this.id, '');
    }
 
-  SendNewPassword() {    
+  SendNewPassword() {
     this.submitted = true;
     this.authService.SendNewPassword(this.model).subscribe(() => {
       console.log('Zmieniono haslo pomyslnie');
@@ -60,6 +59,6 @@ export class ResetPasswordComponent {
     .replace(/%2B/gi, '+')
     .replace(/%3D/gi, '=')
     .replace(/%3F/gi, '?')
-    .replace(/%2F/gi, '/');       // komentarz dla picu
+    .replace(/%2F/gi, '/');
   }
 }

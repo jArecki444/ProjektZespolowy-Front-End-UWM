@@ -1,6 +1,7 @@
 .center_div{
     margin: 0 auto;
-    width: 80%
+    width: 80%;
+    text-align: center;
 }
 agm-map{
     height: 500px;

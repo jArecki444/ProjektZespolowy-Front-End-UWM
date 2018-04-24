@@ -49,11 +49,16 @@ login(model: any) {
      GetUsers() {
          return this.http.get(this.baseUrl + '/User/UserList').map((response: Response) => response.json());
      }
-   // poprawka trzeba przetestować na serwerze
+   // Utworzenie nowego hasła po opcji zapomnij
      SendNewPassword(model: any) {
          console.log(model);
          return this.http.put(this.baseUrl + '/Auth/ChangeForgotPassword', model, this.requestOptions());
      }
+     // Aktualizacja wspolrzednych sprawdzania lokalizacji obecnosci pracownikow - adminka
+     updateGpsLocation(model: any) {
+        console.log(model);
+        return this.http.put(this.baseUrl + '/Position/SetPlacePosition', model, this.requestOptions());
+    }
 
      private requestOptions() {
         const headers = new Headers({ 'Content-type': 'application/json'});

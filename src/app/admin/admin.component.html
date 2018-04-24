@@ -1,12 +1,26 @@
 <div class="containter center_div">
-    <h2 class="text-center text-primary">Wybierz lokalizację do sprawdzania obecności</h2>
-    <hr>
+  <h2 class="text-center text-primary">Wybierz lokalizację do sprawdzania obecności</h2>
+  <hr>
   <p>
-    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
-      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    <agm-map [latitude]="coordinateX" [longitude]="coordinateY" [minZoom]=13 (mapClick)="onChooseLocation($event)">
+      <agm-marker [latitude]="coordinateX" [longitude]="coordinateY"></agm-marker>
+      <agm-circle [latitude]="coordinateX" [longitude]="coordinateY" [radius]="radius" [fillColor]="fillColor"></agm-circle>
     </agm-map>
-
   </p>
+
+
+
+
+  <form #updateGpsLocationForm="ngForm" (ngSubmit)="updateGpsLocation()">
+    <div class="form-group">
+      <label for="name">Aktualizuj współrzędne do sprawdzania obecności na podstawie wybranego wyżej punktu.</label>
+      <input type="text" class="form-control" placeholder="Nazwa nowej lokalizacji" required name="name" [(ngModel)]="model.name">
+    </div>
+
+    
+    <button class="btn btn-success" type="submit">Aktualizacja</button>
+
+  </form>
 </div>
 <div class="RegisterSection">
   <app-register></app-register>
