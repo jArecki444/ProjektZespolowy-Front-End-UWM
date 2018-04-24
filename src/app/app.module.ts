@@ -15,6 +15,7 @@ import { EqualValidator } from './resetPassword/password.match.directive';
 import { AuthGuard } from './_guards/auth.guard';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routing.module';
+import { AgmCoreModule} from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,10 @@ import { appRoutes } from './app-routing.module';
     BrowserModule,
     HttpModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD5ZBj9pPbVAHoFpeYeai_2LyytDazCyJ4'
+    })
   ],
   providers: [
     AuthService,

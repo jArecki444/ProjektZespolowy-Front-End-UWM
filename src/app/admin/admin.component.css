@@ -1,4 +1,13 @@
 .center_div{
     margin: 0 auto;
+    width: 80%
+}
+agm-map{
+    height: 500px;
+    width: auto;
+    margin: 0 auto;
+}
+.RegisterSection{
+    margin: 0 auto;
     width: 20%
 }

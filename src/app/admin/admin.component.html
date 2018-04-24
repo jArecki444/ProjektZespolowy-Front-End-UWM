@@ -1,6 +1,13 @@
 <div class="containter center_div">
-<p>
-  admin works!
-</p>
-<app-register></app-register>
+    <h2 class="text-center text-primary">Wybierz lokalizację do sprawdzania obecności</h2>
+    <hr>
+  <p>
+    <agm-map [latitude]="latitude" [longitude]="longitude" (mapClick)="onChooseLocation($event)">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+
+  </p>
+</div>
+<div class="RegisterSection">
+  <app-register></app-register>
 </div>
