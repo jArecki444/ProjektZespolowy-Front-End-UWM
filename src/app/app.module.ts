@@ -16,6 +16,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routing.module';
 import { AgmCoreModule} from '@agm/core';
+import { AlertifyService } from './_services/alertify.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { AgmCoreModule} from '@agm/core';
   ],
   providers: [
     AuthService,
-    AuthGuard
+    AuthGuard,
+    AlertifyService
+
   ],
   bootstrap: [AppComponent]
 })
