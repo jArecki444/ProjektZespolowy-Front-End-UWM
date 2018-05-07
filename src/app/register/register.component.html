@@ -28,9 +28,16 @@
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Płeć" required name="gender" [(ngModel)]="model.gender">
     </div>
-
+    
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Rodzaj konta" required name="permissions" [(ngModel)]="model.permissions">
+      <label for="sel1">Rodzaj konta:</label>
+      <select 
+      class="form-control" 
+      name="permissions"
+      [(ngModel)]="model.permissions">
+        <option>uzytkownik</option>
+        <option>admin</option>
+      </select>
     </div>
 
     <div class="form-group text-center">

@@ -19,13 +19,13 @@ model: any = {};
     this.authService.register(this.model).subscribe(() => {
       this.alertify.success('Utworzono użytkownika!');
     }, error => {
-      this.alertify.error(error);
+      this.alertify.error('Błędne dane formularza!');
     });
   }
 
-  cancel() {
-    this.cancelRegister.emit(false);
-    console.log('cancelled');
-  }
+  // cancel() {
+  //   this.cancelRegister.emit(false);
+  //   console.log('cancelled');
+  // }
 
 }

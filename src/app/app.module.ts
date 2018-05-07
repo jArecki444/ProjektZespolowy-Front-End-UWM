@@ -43,7 +43,6 @@ import { AlertifyService } from './_services/alertify.service';
     AuthService,
     AuthGuard,
     AlertifyService
-
   ],
   bootstrap: [AppComponent]
 })
