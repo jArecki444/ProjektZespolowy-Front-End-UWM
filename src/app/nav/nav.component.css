@@ -6,6 +6,9 @@ body{
 .dropdown-menu > li > a {
     cursor: pointer;
 }
+.navbar {
+    margin: 0;
+}
 
 #login-dp{
     min-width: 250px;

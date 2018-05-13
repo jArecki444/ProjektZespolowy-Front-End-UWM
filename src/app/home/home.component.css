@@ -1,0 +1,98 @@
+
+/* Header img */
+
+.wide {
+    background: #1f4d6e;
+    width:100%;
+    height:100%;
+    height:calc(95%);
+    /*background: #000 url(https://cssanimation.rocks/demo/starwars/images/bg.jpg); */
+    /*background-image:url("https://media.giphy.com/media/xTiTnDmz0PzoOpc3PG/giphy.gif");*/
+    background-size: cover;
+    background-position: -10px;
+    position: absolute;
+  }
+
+  .wide img {
+    width:100%;
+  }
+  
+/* Header img */
+
+
+@media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+
+  .netland {
+    animation: netland 10s ease-out infinite;
+  }
+  
+  /* Keyframes */
+@keyframes netland {
+    0% {
+      opacity: 0;
+      transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+      opacity: 1;
+    }
+    89% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateZ(-1000em);
+    }
+  }
+
+  /* Make the 3D work on the container */
+.starwars-demo {
+    perspective: 800px;
+    transform-style: preserve3d;
+  }
+
+  /* General styles and layout */
+
+
+.starwars-demo {
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+  }
+
+  img {
+    width: 100%;
+  }
+  
+  .netland {
+    position: absolute;
+  }
+  
+  .netland {
+    top: -0.75em;
+  }
+  
+  
+  
+  /*** Media queries for adjusting to different screen sizes ***/
+  
+  @media only screen and (max-width: 600px) {
+    .starwars-demo {
+      font-size: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .starwars-demo {
+      font-size: 7px;
+    }
+  }
