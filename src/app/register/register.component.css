@@ -1,9 +1,24 @@
 .RegisterSection{
-    margin: 0 auto;
-    width: 20%;
+    margin: 0 auto; 
+    margin-top: -10%; 
+    width: 35%;  
     padding: 3%;
 }
 .lista{
-    padding-top: 10px;
+    margin: 0 auto;
     padding-bottom: 13%;
 }
+
+@media only screen and (max-width: 800px) { 
+    
+    .RegisterSection{
+        width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) { 
+    
+    .RegisterSection{
+        width: 100%;
+    }
+  }
