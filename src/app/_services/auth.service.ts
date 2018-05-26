@@ -3,10 +3,11 @@ import 'rxjs/add/operator/map';
 import { Injectable } from '@angular/core';
 import { Headers, Http, RequestOptions, Response } from '@angular/http';
 import { JwtHelper, tokenNotExpired } from 'angular2-jwt';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
-    baseUrl = 'https://coderscompanyapiv3.azurewebsites.net/api';           // Link do API
+    baseUrl = environment.apiUrl;                                           // Link do API znajduje sie w jednym miejscu (environment)
     userToken: any;                                                         // token użytkownika
     decodedToken: any;                                                      // rozszyfrowany token
     jwtHelper: JwtHelper = new JwtHelper();
@@ -45,10 +46,6 @@ login(model: any) {
         return this.http.post(this.baseUrl + '/Auth/ForgotPassword', model, this.requestOptions());
      }
 
-     // Pobranie listę użytkownikow
-     GetUsers() {
-         return this.http.get(this.baseUrl + '/User/UserList').map((response: Response) => response.json());
-     }
    // Utworzenie nowego hasła po opcji zapomnij
      SendNewPassword(model: any) {
          console.log(model);

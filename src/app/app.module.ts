@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routing.module';
 import { AgmCoreModule} from '@agm/core';
 import { AlertifyService } from './_services/alertify.service';
+import { UserService } from './_services/user.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AlertifyService } from './_services/alertify.service';
   providers: [
     AuthService,
     AuthGuard,
-    AlertifyService
+    AlertifyService,
+    UserService
   ],
   bootstrap: [AppComponent]
 })

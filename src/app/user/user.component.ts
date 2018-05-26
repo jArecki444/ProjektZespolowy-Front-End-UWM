@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../_services/auth.service';
+import { User } from '../_models/user';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,11 +8,17 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  lista: any = {};        // lista użytkownikow
+  lista: User[]; // lista użytkownikow
 
-  constructor(private authService: AuthService) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
-    this.lista = this.authService.GetUsers().subscribe(users => this.lista = users);
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.userService.getUsers().subscribe((lista: User[]) => {
+      this.lista = lista;
+    });
   }
 }
