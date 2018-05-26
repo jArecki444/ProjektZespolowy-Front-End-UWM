@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://coderscompanyapi20180526043321aaa.azurewebsites.net/api'
+  apiUrl: 'https://coderscompanyapi20180526043321aaa.azurewebsites.net/api/'
 };
