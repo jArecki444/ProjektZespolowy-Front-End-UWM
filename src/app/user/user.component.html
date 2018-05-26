@@ -18,9 +18,9 @@
                           </tr>
                       </thead>
                       <tbody>
-                          <tr *ngFor="let list of lista.userList">
+                          <tr *ngFor="let list of lista">
                               <td> 
-                                {{ list.presence == true ? 'Obecny' : 'Nieobecny' }}
+                                {{list.presence == true ? 'Obecny' : 'Nieobecny' }}
                               </td>
                               <td>
                                 {{list.name}}
