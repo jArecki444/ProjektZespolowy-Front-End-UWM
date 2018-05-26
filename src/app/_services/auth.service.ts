@@ -7,7 +7,7 @@ import { environment } from '../../environments/environment';
 
 @Injectable()
 export class AuthService {
-    baseUrl = 'https://coderscompanyapi20180526043321aaa.azurewebsites.net/api';    // Link do API
+    baseUrl = environment.apiUrl;    // URL do API znajduje się w w jednym miejscu (env)
     userToken: any;                                                                 // token użytkownika
     decodedToken: any;                                                           // rozszyfrowany token
     jwtHelper: JwtHelper = new JwtHelper();
