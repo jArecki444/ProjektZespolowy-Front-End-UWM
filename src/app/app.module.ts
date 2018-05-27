@@ -20,6 +20,7 @@ import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
 import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
 import { SlidersModule } from 'angular-precision-sliders';
+import { ZarzadzanieComponent } from './Zarzadzanie/Zarzadzanie.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SlidersModule } from 'angular-precision-sliders';
     ResetPasswordComponent,
     EqualValidator
 ,
-    RemoteUsersListComponent
+    RemoteUsersListComponent,
+    ZarzadzanieComponent
 ],
   imports: [
     BrowserModule,

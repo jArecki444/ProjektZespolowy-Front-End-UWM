@@ -7,7 +7,7 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
-  public basicSliderVal: number;
+  public basicSliderVal = 60;
   model: any = {};
   coordinateX = 53.764125;
   coordinateY = 20.520342;
@@ -36,6 +36,7 @@ export class AdminComponent implements OnInit {
 
   onBasicValueChange(value: number) {
     this.radius = Math.round(value);
+    this.basicSliderVal = this.radius;
   }
 
   ngOnInit() {

@@ -8,6 +8,7 @@ import { AuthGuard } from './_guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
+import { ZarzadzanieComponent } from './Zarzadzanie/Zarzadzanie.component';
 export const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
@@ -19,7 +20,8 @@ export const appRoutes: Routes = [
         {path: 'user', component: UserComponent},
         {path: 'remoteuser', component: RemoteUsersListComponent},
         {path: 'admin', component: AdminComponent},
-        {path: 'register', component: RegisterComponent}
+        {path: 'register', component: RegisterComponent},
+        {path: 'zarzadzanie', component: ZarzadzanieComponent}
       ]
     },
     {path: 'forget_password', component: ForgetPasswordComponent},
