@@ -19,8 +19,9 @@
                       </thead>
                       <tbody>
                           <tr *ngFor="let list of lista">
-                              <td> 
-                                {{list.presence == true ? 'Obecny' : 'Nieobecny' }}
+                              <td class="center"> 
+                                <div *ngIf="list.presence == false" class="circle-red"></div> 
+                                <div *ngIf="list.presence == true" class="circle-green"></div>
                               </td>
                               <td>
                                 {{list.name}}
