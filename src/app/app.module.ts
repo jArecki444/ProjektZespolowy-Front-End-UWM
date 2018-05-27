@@ -18,6 +18,7 @@ import { appRoutes } from './app-routing.module';
 import { AgmCoreModule} from '@agm/core';
 import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
+import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UserService } from './_services/user.service';
     AdminComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    EqualValidator
+    EqualValidator,
+    RemoteUsersListComponent
 ],
   imports: [
     BrowserModule,

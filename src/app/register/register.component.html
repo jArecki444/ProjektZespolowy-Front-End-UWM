@@ -5,10 +5,10 @@
 
 <div class="container RegisterSection">
   <form #registerForm="ngForm" (ngSubmit)="register()">
-
-    <h2 class="text-center text-primary">Dodaj nowego pracownika</h2>
-
     <hr>
+    <h2 class="text-center text-primary">Dodaj nowego pracownika</h2>
+    <hr>
+    
     <div class="form-group">
       <input type="text" class="form-control" placeholder="Email" required name="emailAdress" [(ngModel)]="model.emailAdress">
     </div>
