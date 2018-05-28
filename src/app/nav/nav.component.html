@@ -12,10 +12,9 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul *ngIf="loggedIn()" class="nav navbar-nav">
         <li routerLinkActive="active"><a *ngIf="authService.decodedToken?.role == 'uzytkownik'" [routerLink]="['/user']">Ewidencja obecności</a></li>
-        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/admin']">Ewidencja obecności</a></li>
-        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/register']">Dodaj Użytkownika</a></li>
+        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/admin']">Zarządzanie lokalizacją</a></li>
+        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/register']">Zarządzanie użytkownikami</a></li>
         <li><a [routerLink]="['/remoteuser']">Pracujący zdalnie</a></li>
-        <li><a [routerLink]="['/zarzadzanie']">Zarządzanie użytkownikami</a></li>
       </ul>
 
       <!--

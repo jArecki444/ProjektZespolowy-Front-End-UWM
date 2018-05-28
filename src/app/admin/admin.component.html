@@ -8,12 +8,6 @@
     </agm-map>
   </p>
 
-  <div class="col-md-10 vertical-center">
-      <h5>Promień</h5>
-      <aps-responsive-slider class="slider basic-slider" [minValue]="0" [maxValue]="2500" [initialValue]="60" [handleWidth]="30" [trackHeight]="12"
-      [bottomColour]="'green'" [middleColour]="'green'" [topColour]="'green'" (valueChanged)="onBasicValueChange($event)"></aps-responsive-slider>
-  </div>
-
 
 
 
@@ -21,7 +15,7 @@
     <div class="form-group">
       <label for="name">Aktualizuj współrzędne do sprawdzania obecności na podstawie wybranego wyżej punktu.</label>
       <input type="text" class="form-control" placeholder="Nazwa nowej lokalizacji" required name="name" [(ngModel)]="model.name">
-    </div>   
+    </div>
 
     
     <button class="btn btn-success" type="submit">Aktualizacja</button>
