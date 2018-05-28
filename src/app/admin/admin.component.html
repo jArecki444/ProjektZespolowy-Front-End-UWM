@@ -8,6 +8,11 @@
     </agm-map>
   </p>
 
+  <div class="col-md-12 vertical-center">
+    <h5>Promień</h5>
+    <aps-responsive-slider class="slider basic-slider" [minValue]="0" [maxValue]="2500" [initialValue]="0" [handleWidth]="30" [trackHeight]="12"
+    [bottomColour]="'green'" [middleColour]="'green'" [topColour]="'green'" (valueChanged)="onBasicValueChange($event)"></aps-responsive-slider>
+</div>
 
 
 

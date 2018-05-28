@@ -7,10 +7,11 @@ import { AuthService } from '../_services/auth.service';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+  public basicSliderVal: number;
   model: any = {};
   coordinateX = 53.764125;
   coordinateY = 20.520342;
-  radius = 60; // promień w metrach
+  radius = this.basicSliderVal; // promień w metrach
   fillColor = 'blue';
   name: any;
 
@@ -32,6 +33,10 @@ export class AdminComponent implements OnInit {
       console.log(error);
     });
   }
+  onBasicValueChange(value: number) {
+    this.radius = Math.round(value);
+  }
+
   ngOnInit() {
   }
 

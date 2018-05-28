@@ -19,6 +19,7 @@ import { AgmCoreModule} from '@agm/core';
 import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
 import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
+import { SlidersModule } from 'angular-precision-sliders';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.comp
     AdminComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
-    EqualValidator,
+    EqualValidator
+,
     RemoteUsersListComponent
 ],
   imports: [
@@ -40,7 +42,8 @@ import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.comp
     RouterModule.forRoot(appRoutes),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD5ZBj9pPbVAHoFpeYeai_2LyytDazCyJ4'
-    })
+    }),
+    SlidersModule
   ],
   providers: [
     AuthService,
