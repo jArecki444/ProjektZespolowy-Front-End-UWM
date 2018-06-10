@@ -1,0 +1,19 @@
+.EditSection{
+    margin: 0 auto; 
+    width: 35%;  
+    padding: 3%;
+}
+
+@media only screen and (max-width: 800px) { 
+    
+    .EditSection{
+        width: 70%;
+    }
+  }
+  
+  @media only screen and (max-width: 450px) { 
+    
+    .EditSection{
+        width: 100%;
+    }
+  }

@@ -1,0 +1,39 @@
+<div class="container EditSection">
+  <form #registerForm="ngForm" (ngSubmit)="edit()">
+    <hr>
+    <h2 class="text-center text-primary">Edycja profilu</h2>
+    <hr>
+    <h3>Twoje dane: </h3>
+    <p>Twoje imię:  {{authService.decodedToken?.unique_name | titlecase }} </p>
+    <p>Twoje nazwisko:  {{authService.decodedToken?.family_name | titlecase }} </p>
+    <p>Twoje płeć:  {{authService.decodedToken?.gender | titlecase }} </p>
+    <hr>
+    <h3>Podaj nowe dane: </h3>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Imię" required name="name" [(ngModel)]="model.name">
+    </div>
+
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Nazwisko" required name="surname" [(ngModel)]="model.surname">
+    </div>
+
+    <!-- <div class="form-group">
+      <input type="text" class="form-control" placeholder="Płeć" required name="gender" [(ngModel)]="model.gender">
+    </div>
+     -->
+    <div class="form-group">
+      <label for="sel1">Jak się rozmyśliłeś to możesz zmienić płeć :D</label>
+      <select 
+      class="form-control" 
+      name="gender"
+      [(ngModel)]="model.gender">
+        <option>Mężczyzna</option>
+        <option>Kobieta</option>
+      </select>
+    </div>
+
+    <div class="form-group text-center">
+      <button class="btn btn-success" type="submit">Zmień dane konta</button>
+    </div>
+  </form>
+</div>

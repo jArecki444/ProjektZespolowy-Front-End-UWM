@@ -41,6 +41,10 @@ export class UserService {
           .get(this.baseUrl + '/User/GetUserAbsenceForAdmin', this.jwt())
           .map(response => <RemoteUser>response.json().userList);
       }
+      // Edycja danych konta user/admin
+      EditProfile(model: any) {
+        return this.http.put(this.baseUrl + '/Auth/ProfileEdition', model, this.jwt());
+     }
 
   private jwt() {
     const token = localStorage.getItem('token');

@@ -8,7 +8,6 @@ import { AuthService } from './_services/auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { UserComponent } from './user/user.component';
-import { AdminComponent } from './admin/admin.component';
 import { ForgetPasswordComponent } from './ForgetPassword/ForgetPassword.component';
 import { ResetPasswordComponent } from './resetPassword/resetPassword.component';
 import { EqualValidator } from './resetPassword/password.match.directive';
@@ -24,6 +23,7 @@ import { AbsenceListForUserComponent } from './absenceListForUser/absenceListFor
 import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
 import { RemoteUsersListForAdminComponent } from './remoteUsersListForAdmin/remoteUsersListForAdmin.component';
 import { GpsLocationComponent } from './gps-location/gps-location.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,6 @@ import { GpsLocationComponent } from './gps-location/gps-location.component';
     HomeComponent,
     RegisterComponent,
     UserComponent,
-    AdminComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
     EqualValidator
@@ -40,9 +39,11 @@ import { GpsLocationComponent } from './gps-location/gps-location.component';
 RemoteUsersListForUserComponent
 ,
     AbsenceListForUserComponent,
-    AbsenceListForAdminComponent,
+    AbsenceListForAdminComponent
+,
     RemoteUsersListForAdminComponent,
-    GpsLocationComponent
+    GpsLocationComponent,
+    ProfileEditComponent
 ],
   imports: [
     BrowserModule,

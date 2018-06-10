@@ -9,7 +9,6 @@ import { AlertifyService } from '../_services/alertify.service';
 })
 export class RegisterComponent implements OnInit {
 model: any = {};
-@Output() cancelRegister = new EventEmitter();
   constructor(private authService: AuthService, private alertify: AlertifyService) { }
 
   ngOnInit() {
@@ -22,10 +21,4 @@ model: any = {};
       this.alertify.error('Błędne dane formularza!');
     });
   }
-
-  // cancel() {
-  //   this.cancelRegister.emit(false);
-  //   console.log('cancelled');
-  // }
-
 }

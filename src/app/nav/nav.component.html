@@ -12,8 +12,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul *ngIf="loggedIn()" class="nav navbar-nav">
         <li routerLinkActive="active"><a *ngIf="authService.decodedToken?.role == 'uzytkownik' || authService.decodedToken?.role == 'admin'" [routerLink]="['/user']">Ewidencja obecności</a></li>
-        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/gpslocation']">Zarządzanie lokalizacją2</a></li>
-        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/admin']">Zarządzanie lokalizacją1</a></li>
+        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/gpslocation']">Zarządzanie lokalizacją</a></li>
         <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/register']">Zarządzanie użytkownikami</a></li>
         <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/absenceforAdmin']">Zgłoszone nieobecności</a></li>
         <li><a *ngIf="authService.decodedToken?.role == 'uzytkownik'" [routerLink]="['/absenceforUser']">Zgłoszone nieobecności</a></li> 
@@ -56,7 +55,7 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" 
           aria-haspopup="true" aria-expanded="false">Witaj {{authService.decodedToken?.unique_name | titlecase | uppercase}} <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#"><i class="fa fa-user"></i> Edit profile</a></li>
+            <li><a [routerLink]="['/editprofile']"><i class="fa fa-user"></i>Edycja profilu</a></li> 
             <li role="separator" class="divider"></li>
             <li><a class="raczka" (click)="logout()"><i class="fa fa-sign-out"></i>Wyloguj</a></li>
           </ul>
