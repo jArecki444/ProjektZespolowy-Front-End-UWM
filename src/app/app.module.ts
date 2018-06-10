@@ -21,6 +21,7 @@ import { UserService } from './_services/user.service';
 import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
 import { SlidersModule } from 'angular-precision-sliders';
 import { AbsenceListForUserComponent } from './absenceListForUser/absenceListForUser.component';
+import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AbsenceListForUserComponent } from './absenceListForUser/absenceListFor
     EqualValidator
 ,
     RemoteUsersListComponent,
-    AbsenceListForUserComponent
+    AbsenceListForUserComponent,
+    AbsenceListForAdminComponent
 ],
   imports: [
     BrowserModule,

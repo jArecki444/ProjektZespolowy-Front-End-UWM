@@ -29,6 +29,12 @@ export class UserService {
         .get(this.baseUrl + '/User/GetUserAbsenceForUser', this.jwt())
         .map(response => <RemoteUser>response.json().userList);
     }
+     // Pobranie kompletnej listy niebecnosci dla administratora
+      getAbsenceForAdmin(): Observable<RemoteUser> {
+        return this.http
+          .get(this.baseUrl + '/User/GetUserAbsenceForAdmin', this.jwt())
+          .map(response => <RemoteUser>response.json().userList);
+      }
 
   private jwt() {
     const token = localStorage.getItem('token');
