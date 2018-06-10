@@ -23,6 +23,7 @@ import { SlidersModule } from 'angular-precision-sliders';
 import { AbsenceListForUserComponent } from './absenceListForUser/absenceListForUser.component';
 import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
 import { RemoteUsersListForAdminComponent } from './remoteUsersListForAdmin/remoteUsersListForAdmin.component';
+import { GpsLocationComponent } from './gps-location/gps-location.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ RemoteUsersListForUserComponent
 ,
     AbsenceListForUserComponent,
     AbsenceListForAdminComponent,
-    RemoteUsersListForAdminComponent
+    RemoteUsersListForAdminComponent,
+    GpsLocationComponent
 ],
   imports: [
     BrowserModule,

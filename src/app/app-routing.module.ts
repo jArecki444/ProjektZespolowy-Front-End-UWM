@@ -11,6 +11,7 @@ import { RemoteUsersListForUserComponent } from './remoteUsersListForUser/remote
 import { AbsenceListForUserComponent } from './absenceListForUser/absenceListForUser.component';
 import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
 import { RemoteUsersListForAdminComponent } from './remoteUsersListForAdmin/remoteUsersListForAdmin.component';
+import { GpsLocationComponent } from './gps-location/gps-location.component';
 
 export const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -26,6 +27,7 @@ export const appRoutes: Routes = [
         {path: 'absenceforUser', component: AbsenceListForUserComponent},
         {path: 'absenceforAdmin', component: AbsenceListForAdminComponent},
         {path: 'admin', component: AdminComponent},
+        {path: 'gpslocation', component: GpsLocationComponent},
         {path: 'register', component: RegisterComponent}
       ]
     },
