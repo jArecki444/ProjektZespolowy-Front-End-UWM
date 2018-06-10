@@ -4,11 +4,11 @@ import { UserService } from '../_services/user.service';
 import { RemoteUser } from '../_models/remoteUser';
 
 @Component({
-  selector: 'app-remoteusers-list',
+  selector: 'app-remoteusers-list-foruser',
   templateUrl: './remoteUsersList.component.html',
   styleUrls: ['./remoteUsersList.component.css']
 })
-export class RemoteUsersListComponent implements OnInit {
+export class RemoteUsersListForUserComponent implements OnInit {
   listaRemote: RemoteUser; // lista użytkownikow pracujących zdalnie
   constructor(private userService: UserService) { }
 
@@ -17,7 +17,7 @@ export class RemoteUsersListComponent implements OnInit {
   }
 
   loadRemoteUsers() {
-    this.userService.getRemoteUsers().subscribe((listaRemote: RemoteUser) => {
+    this.userService.getRemoteUsersForUser().subscribe((listaRemote: RemoteUser) => {
       this.listaRemote = listaRemote;
     });
   }

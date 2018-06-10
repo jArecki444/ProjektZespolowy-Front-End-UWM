@@ -7,9 +7,10 @@ import { ResetPasswordComponent } from './resetPassword/resetPassword.component'
 import { AuthGuard } from './_guards/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
+import { RemoteUsersListForUserComponent } from './remoteUsersListForUser/remoteUsersList.component';
 import { AbsenceListForUserComponent } from './absenceListForUser/absenceListForUser.component';
 import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
+import { RemoteUsersListForAdminComponent } from './remoteUsersListForAdmin/remoteUsersListForAdmin.component';
 
 export const appRoutes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -20,7 +21,8 @@ export const appRoutes: Routes = [
       canActivate: [AuthGuard],
       children: [
         {path: 'user', component: UserComponent},
-        {path: 'remoteuser', component: RemoteUsersListComponent},
+        {path: 'remoteForuser', component: RemoteUsersListForUserComponent},
+        {path: 'remoteForadmin', component: RemoteUsersListForAdminComponent},
         {path: 'absenceforUser', component: AbsenceListForUserComponent},
         {path: 'absenceforAdmin', component: AbsenceListForAdminComponent},
         {path: 'admin', component: AdminComponent},

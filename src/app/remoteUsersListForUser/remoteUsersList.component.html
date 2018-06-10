@@ -1,0 +1,47 @@
+
+<div class="container  text-center">
+  <h1>Lista osób pracujących zdalnie</h1>
+  <hr>
+      <div class="table-responsive">
+            <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Imię
+                            </th>
+                            <th>
+                                Nazwisko
+                            </th>
+                            <th>
+                                Kiedy zaczyna?
+                            </th>
+                            <th>
+                              Kiedy kończy?
+                          </th>
+                          <th>
+                            Powód
+                        </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let list of listaRemote">
+                            <td> 
+                              {{list.imie}}
+                            </td>
+                            <td>
+                              {{list.nazwisko}}
+                            </td>
+                            <td>
+                              {{list.dataOd}}  {{list.timeOd}}
+                            </td>
+                            <td>
+                              {{list.dataDo}}  {{list.timeDo}}
+                            </td>
+                            <td>
+                              {{list.powod}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+  </div>

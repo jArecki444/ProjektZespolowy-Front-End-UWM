@@ -18,10 +18,11 @@ import { appRoutes } from './app-routing.module';
 import { AgmCoreModule} from '@agm/core';
 import { AlertifyService } from './_services/alertify.service';
 import { UserService } from './_services/user.service';
-import { RemoteUsersListComponent } from './remoteUsersList/remoteUsersList.component';
+import { RemoteUsersListForUserComponent } from './remoteUsersListForUser/remoteUsersList.component';
 import { SlidersModule } from 'angular-precision-sliders';
 import { AbsenceListForUserComponent } from './absenceListForUser/absenceListForUser.component';
 import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListForAdmin.component';
+import { RemoteUsersListForAdminComponent } from './remoteUsersListForAdmin/remoteUsersListForAdmin.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,11 @@ import { AbsenceListForAdminComponent } from './absenceListForAdmin/absenceListF
     ResetPasswordComponent,
     EqualValidator
 ,
-    RemoteUsersListComponent,
+RemoteUsersListForUserComponent
+,
     AbsenceListForUserComponent,
-    AbsenceListForAdminComponent
+    AbsenceListForAdminComponent,
+    RemoteUsersListForAdminComponent
 ],
   imports: [
     BrowserModule,

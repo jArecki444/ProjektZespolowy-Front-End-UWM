@@ -16,7 +16,8 @@
         <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/register']">Zarządzanie użytkownikami</a></li>
         <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/absenceforAdmin']">Zgłoszone nieobecności</a></li>
         <li><a *ngIf="authService.decodedToken?.role == 'uzytkownik'" [routerLink]="['/absenceforUser']">Zgłoszone nieobecności</a></li> 
-        <li><a [routerLink]="['/remoteuser']">Pracujący zdalnie</a></li>
+        <li><a *ngIf="authService.decodedToken?.role == 'uzytkownik'" [routerLink]="['/remoteForuser']">Zgłoszona praca zdalna</a></li>
+        <li><a *ngIf="authService.decodedToken?.role == 'admin'" [routerLink]="['/remoteForadmin']">Pracujący zdalnie</a></li>
       </ul>
       
       <ul *ngIf="!loggedIn()" class="nav navbar-nav navbar-right">

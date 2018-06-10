@@ -17,12 +17,18 @@ export class UserService {
       .map(response => <User>response.json().userList);
   }
 
-  // Pobranie listy użytkownikow pracujących zdalnie
-  getRemoteUsers(): Observable<RemoteUser> {
+  // Pobranie listy wszystkich użytkownikow pracujących zdalnie dla administratora
+  getRemoteUsersForAdmin(): Observable<RemoteUser> {
     return this.http
-      .get(this.baseUrl + '/User/UserGetListOfRemoteWork', this.jwt())
+      .get(this.baseUrl + '/User/UserGetListOfRemoteWorkForAdmin', this.jwt())
       .map(response => <RemoteUser>response.json().userList);
   }
+    // Pobranie listy pracy zdalnej dla usera
+    getRemoteUsersForUser(): Observable<RemoteUser> {
+      return this.http
+        .get(this.baseUrl + '/User/UserGetListOfRemoteWorkForUser', this.jwt())
+        .map(response => <RemoteUser>response.json().userList);
+    }
     // Pobranie listy niebecnosci dla danego usera
     getAbsenceForUser(): Observable<RemoteUser> {
       return this.http
