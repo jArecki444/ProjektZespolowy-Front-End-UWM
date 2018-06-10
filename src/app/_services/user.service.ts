@@ -23,6 +23,12 @@ export class UserService {
       .get(this.baseUrl + '/User/UserGetListOfRemoteWork', this.jwt())
       .map(response => <RemoteUser>response.json().userList);
   }
+    // Pobranie listy niebecnosci dla danego usera
+    getAbsenceForUser(): Observable<RemoteUser> {
+      return this.http
+        .get(this.baseUrl + '/User/GetUserAbsenceForUser', this.jwt())
+        .map(response => <RemoteUser>response.json().userList);
+    }
 
   private jwt() {
     const token = localStorage.getItem('token');
