@@ -19,4 +19,16 @@ export class AbsenceListForAdminComponent implements OnInit {
         this.listaAbsence = listaAbsence;
       });
     }
+    time24h(time12h) {
+      const [time, modifier] = time12h.split(' ');
+      const [hour, minutes] = time.split(':');
+      let hours = hour;
+      if (hours === '12') {
+        hours = '00';
+      }
+      if (modifier === 'PM') {
+        hours = parseInt(hours, 10) + 12;
+      }
+      return hours + ':' + minutes;
+    }
   }
